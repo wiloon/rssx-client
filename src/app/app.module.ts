@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import {HelloComponent} from "./hello.component";
 import {HeroComponent} from "./hero.component";
 import {HeroChildComponent} from "./herochild.component";
-
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import {HeroChildComponent} from "./herochild.component";
     HeroChildComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
