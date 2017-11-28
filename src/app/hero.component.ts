@@ -34,6 +34,7 @@ export class HeroComponent {
     this.http.get('/refresh').subscribe(data => {
       // Read the result field from the JSON response.
       console.log(data)
+      this.heroes[0]= <string>data
     });
 
 
