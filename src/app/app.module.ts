@@ -3,9 +3,9 @@ import {NgModule} from '@angular/core';
 
 
 import {AppComponent} from './app.component';
-import {HelloComponent} from "./hello.component";
-import {HeroComponent} from "./hero.component";
-import {HeroChildComponent} from "./herochild.component";
+import {HelloComponent} from './hello.component';
+import {HeroComponent} from './hero.component';
+import {HeroChildComponent} from './herochild.component';
 import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({

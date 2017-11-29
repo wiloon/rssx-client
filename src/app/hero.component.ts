@@ -1,13 +1,13 @@
-import {Component} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
+import {Component} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 
 @Component({
-  selector: 'hero-root',
+  selector: 'app-hero-root',
   template: `
     <button id="input" (click)="refresh()">Refresh</button>
-    <h1>{{title}}</h1>
-    <h2>My favorite hero is: {{myHero}}</h2>
+    <h1>{{ title }}</h1>
+    <h2>My favorite hero is: {{ myHero }}</h2>
     <p>Heroes:</p>
     <ul>
       <li *ngFor="let hero of heroes">
@@ -33,8 +33,8 @@ export class HeroComponent {
   refresh() {
     this.http.get('/refresh').subscribe(data => {
       // Read the result field from the JSON response.
-      console.log(data)
-      this.heroes[0]= <string>data
+      console.log(data);
+      this.heroes = <string[]>data;
     });
 
 
