@@ -11,7 +11,7 @@ import {HttpClient} from '@angular/common/http';
     <p>Heroes:</p>
     <ul>
       <li *ngFor="let hero of heroes">
-        {{ hero }}
+        <a href="#">{{ hero }}</a>
       </li>
     </ul>
   `
