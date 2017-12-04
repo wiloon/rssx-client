@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Feed} from '../feed';
+import {FeedService} from '../feed.service';
 
 @Component({
   selector: 'app-feed-list',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feed-list.component.css']
 })
 export class FeedListComponent implements OnInit {
+  feeds: Feed[];
 
-  constructor() { }
+  feed: Feed = {
+    id: 0,
+    title: 'abc'
+  };
 
-  ngOnInit() {
+  constructor(private feedService: FeedService) {
   }
 
+  ngOnInit() {
+    this.getFeeds()
+  }
+
+  getFeeds(): void {
+    this.feedService.getFeeds().subscribe(feeds => this.feeds = feeds);
+  }
 }

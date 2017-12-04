@@ -15,6 +15,8 @@ import { MessageService } from './message.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FeedListComponent } from './feed-list/feed-list.component';
+import {FeedService} from "./feed.service";
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { FeedListComponent } from './feed-list/feed-list.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    FeedListComponent
+    FeedListComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ import { FeedListComponent } from './feed-list/feed-list.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [ HeroService, MessageService ],
+  providers: [ HeroService, MessageService ,FeedService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
