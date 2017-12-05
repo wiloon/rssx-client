@@ -9,13 +9,13 @@ import {HeroChildComponent} from './herochild.component';
 import {HttpClientModule} from '@angular/common/http';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { HeroService } from "./hero.service";
+import { HeroService } from './hero.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FeedListComponent } from './feed-list/feed-list.component';
-import {FeedService} from "./feed.service";
+import {FeedService} from './feed.service';
 import { FeedComponent } from './feed/feed.component';
 import { NewsComponent } from './news/news.component';
 
