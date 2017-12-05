@@ -1,8 +1,10 @@
 import {Injectable} from '@angular/core';
-import {Observable} from "rxjs/Observable";
-import {Feed} from "./feed";
-import {FEEDS} from "./mock-feed";
-import {of} from "rxjs/observable/of";
+import {Observable} from 'rxjs/Observable';
+import {Feed} from './feed';
+import {FEEDS} from './mock-feed';
+import {of} from 'rxjs/observable/of';
+import {NEWS_LIST} from './mock-news-list';
+import {News} from './news';
 
 @Injectable()
 export class FeedService {
@@ -11,6 +13,15 @@ export class FeedService {
   }
 
   getFeeds(): Observable<Feed[]> {
-    return of(FEEDS)
+    return of(FEEDS);
+  }
+
+  getNewsList(id: number): Observable<News[]> {
+    // return of(FEEDS.find(feed => feed.id === id));
+    return of(NEWS_LIST);
+  }
+
+  getNewsListA(id: number): News[] {
+    return NEWS_LIST;
   }
 }

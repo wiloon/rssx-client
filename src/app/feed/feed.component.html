@@ -1,3 +1,9 @@
-<p>
-  feed works!
-</p>
+<h2>feed news list</h2>
+
+<ul class="news-list">
+  <li *ngFor="let news of newsList">
+    <a routerLink="/news/{{news.id}}">
+      <span class="badge">{{news.id}}</span> {{news.title}}
+    </a>
+  </li>
+</ul>
