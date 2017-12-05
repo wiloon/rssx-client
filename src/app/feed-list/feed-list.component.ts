@@ -11,8 +11,8 @@ export class FeedListComponent implements OnInit {
   feeds: Feed[];
 
   feed: Feed = {
-    id: 0,
-    title: 'abc'
+    Id: 0,
+    Title: 'abc'
   };
 
   constructor(private feedService: FeedService) {

@@ -1,26 +1,28 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {Feed} from './feed';
-import {FEEDS} from './mock-feed';
 import {of} from 'rxjs/observable/of';
 import {NEWS_LIST} from './mock-news-list';
 import {News} from './news';
-
+import {HttpClient} from '@angular/common/http';
+import {MessageService} from "./message.service";
 
 @Injectable()
 export class FeedService {
+  private feedsUel = 'api/feeds';
 
-  constructor() {
+  constructor(private http: HttpClient, private messageService: MessageService) {
   }
 
   getFeeds(): Observable<Feed[]> {
 
-    return of(FEEDS);
+    // return of(FEEDS);
+    return this.http.get<Feed[]>(this.feedsUel)
   }
 
   getNewsList(id: number): Observable<News[]> {
     // return of(FEEDS.find(feed => feed.id === id));
-      return of(NEWS_LIST);
+    return of(NEWS_LIST);
 
     // return this._http.get('http://localhost:3000/log', {
     //   params: {
@@ -41,5 +43,9 @@ export class FeedService {
 
   getNews(id: number): Observable<News> {
     return of(NEWS_LIST.find(news => news.id === id));
+  }
+
+  private log(message: string) {
+    this.messageService.add('HeroService: ' + message);
   }
 }

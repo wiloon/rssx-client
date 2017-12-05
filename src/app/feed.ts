@@ -1,4 +1,4 @@
 export class Feed {
-  id: number;
-  title: string;
+  Id: number;
+  Title: string;
 }
