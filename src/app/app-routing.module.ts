@@ -5,6 +5,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {HeroDetailComponent} from './hero-detail/hero-detail.component';
 import {FeedListComponent} from './feed-list/feed-list.component';
 import {FeedComponent} from './feed/feed.component';
+import {NewsComponent} from './news/news.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/feeds', pathMatch: 'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'detail/:id', component: HeroDetailComponent},
   {path: 'feeds', component: FeedListComponent},
   {path: 'feed/:id', component: FeedComponent},
+  {path: 'news/:id', component: NewsComponent},
 ];
 
 @NgModule({

@@ -17,6 +17,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FeedListComponent } from './feed-list/feed-list.component';
 import {FeedService} from "./feed.service";
 import { FeedComponent } from './feed/feed.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FeedComponent } from './feed/feed.component';
     MessagesComponent,
     DashboardComponent,
     FeedListComponent,
-    FeedComponent
+    FeedComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

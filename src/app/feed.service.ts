@@ -24,4 +24,8 @@ export class FeedService {
   getNewsListA(id: number): News[] {
     return NEWS_LIST;
   }
+
+  getNews(id: number): Observable<News> {
+    return of(NEWS_LIST.find(news => news.id === id));
+  }
 }
