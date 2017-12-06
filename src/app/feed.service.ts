@@ -5,7 +5,7 @@ import {of} from 'rxjs/observable/of';
 import {NEWS_LIST} from './mock-news-list';
 import {News} from './news';
 import {HttpClient} from '@angular/common/http';
-import {MessageService} from "./message.service";
+import {MessageService} from './message.service';
 
 @Injectable()
 export class FeedService {
@@ -17,7 +17,7 @@ export class FeedService {
   getFeeds(): Observable<Feed[]> {
 
     // return of(FEEDS);
-    return this.http.get<Feed[]>(this.feedsUel)
+    return this.http.get<Feed[]>(this.feedsUel);
   }
 
   getNewsList(id: number): Observable<News[]> {
