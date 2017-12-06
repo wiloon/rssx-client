@@ -1,10 +1,10 @@
 import {News} from './news';
 
 export const NEWS_LIST: News[] = [
-  {id: 0, title: 'n0', url: 'https://www.oschina.net/news/90808/mariadb-columnstore-1-1-2', description: 'd0'},
+  {Id: 0, Title: 'n0', Url: 'https://www.oschina.net/news/90808/mariadb-columnstore-1-1-2', Description: 'd0'},
   {
-    id: 1, title: 'n1',
-    url: 'https://www.oschina.net/news/90807/overview-of-visual-studio-2017-updates-for-net-developers',
-    description: 'd1'
+    Id: 1, Title: 'n1',
+    Url: 'https://www.oschina.net/news/90807/overview-of-visual-studio-2017-updates-for-net-developers',
+    Description: 'd1'
   },
 ];

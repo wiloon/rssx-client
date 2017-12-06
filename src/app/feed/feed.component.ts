@@ -12,10 +12,10 @@ import {Location} from '@angular/common';
 export class FeedComponent implements OnInit {
   newsList: News[];
   news: News = {
-    id: 0,
-    title: 't0',
-    url: 'u0',
-    description: 'd0'
+    Id: 0,
+    Title: 't0',
+    Url: 'u0',
+    Description: 'd0'
   };
 
   constructor(private route: ActivatedRoute,
