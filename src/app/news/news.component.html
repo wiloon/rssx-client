@@ -1,6 +1,6 @@
 <div *ngIf="news">
   <h2><a href="{{news.Url}}" target="_blank">{{ news.Title   }}</a></h2>
-  <p>
-  {{news.Description}}
-  </p>
+
+  <div [innerHtml]="news.Description"></div>
+
 </div>
