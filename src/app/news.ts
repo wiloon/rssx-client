@@ -3,4 +3,5 @@ export class News {
   Title: string;
   Url: string;
   Description: string;
+  NextId: number;
 }

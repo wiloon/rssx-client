@@ -11,12 +11,6 @@ import {Location} from '@angular/common';
 })
 export class FeedComponent implements OnInit {
   newsList: News[];
-  news: News = {
-    Id: 0,
-    Title: 't0',
-    Url: 'u0',
-    Description: 'd0'
-  };
 
   constructor(private route: ActivatedRoute,
               private feedService: FeedService,
