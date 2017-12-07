@@ -19,7 +19,7 @@ export class FeedService {
 
   getNewsList(id: number): Observable<News[]> {
     // return of(FEEDS.find(feed => feed.id === id));
-    return this.http.get<News[]>('api/news?id=' + id);
+    return this.http.get<News[]>('api/news-list?id=' + id);
   }
 
   getNewsListA(id: number): News[] {
@@ -27,7 +27,7 @@ export class FeedService {
   }
 
   getNews(id: number): Observable<News> {
-    return of(NEWS_LIST.find(news => news.Id === id));
+    return this.http.get<News>('api/news?id=' + id);
   }
 
   private log(message: string) {
