@@ -3,7 +3,7 @@
 <ul class="news-list">
   <li *ngFor="let news of newsList">
     <a routerLink="/news/{{news.Id}}">
-      <span class="badge">{{news.Id}}</span> {{news.Title}}
+    {{news.Title}}
     </a>
   </li>
 </ul>
