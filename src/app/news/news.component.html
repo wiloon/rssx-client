@@ -1,4 +1,5 @@
 <div *ngIf="news">
+  <button id="input" (click)="next()">Next</button>
   <h2><a href="{{news.Url}}" target="_blank">{{ news.Title   }}</a></h2>
 
   <div [innerHtml]="news.Description"></div>

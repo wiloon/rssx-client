@@ -26,4 +26,8 @@ export class NewsComponent implements OnInit {
     this.feedService.getNews(newsId).subscribe(news => this.news = news);
 
   }
+
+  next(): void {
+    this.feedService.getNews(this.news.Id + 1).subscribe(news => this.news = news);
+  }
 }
