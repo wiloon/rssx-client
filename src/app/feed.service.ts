@@ -18,8 +18,9 @@ export class FeedService {
   }
 
   getNewsList(id: number): Observable<News[]> {
-    // return of(FEEDS.find(feed => feed.id === id));
-    return this.http.get<News[]>('api/news-list?id=' + id);
+    let newsList: Observable<News[]>;
+    newsList = this.http.get<News[]>('api/news-list?id=' + id);
+    return newsList;
   }
 
 

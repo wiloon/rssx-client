@@ -24,8 +24,6 @@ export class FeedComponent implements OnInit {
   getNewsList(): void {
     const feedId = +this.route.snapshot.paramMap.get('id');
     this.feedService.getNewsList(feedId).subscribe(newsList => this.newsList = newsList);
-    // this.newsList = this.feedService.getNewsListA(feedId);
-    console.log(this.newsList);
   }
 
   goBack(): void {

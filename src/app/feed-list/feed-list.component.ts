@@ -19,7 +19,7 @@ export class FeedListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getFeeds()
+    this.getFeeds();
   }
 
   getFeeds(): void {
