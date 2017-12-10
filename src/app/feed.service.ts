@@ -25,8 +25,8 @@ export class FeedService {
   }
 
 
-  getNews(id: number): Observable<News> {
-    return this.http.get<News>('api/news?id=' + id);
+  getNews(feedId, id: number): Observable<News> {
+    return this.http.get<News>('api/news', {params: new HttpParams().set('id', String(id)).set('feedId', String(feedId))});
   }
 
   private log(message: string) {

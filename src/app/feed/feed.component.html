@@ -1,6 +1,6 @@
 <ul class="news-list">
   <li *ngFor="let news of newsList">
-    <a routerLink="/news/{{news.Id}}" >
+    <a routerLink="/news/{{news.FeedId}}/{{news.Id}}">
     {{news.Title}}
     </a>
   </li>

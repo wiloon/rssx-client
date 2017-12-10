@@ -22,13 +22,13 @@ export class NewsComponent implements OnInit {
   }
 
   getNews(): void {
+    const feedId = +this.route.snapshot.paramMap.get('feedId');
     const newsId = +this.route.snapshot.paramMap.get('id');
-    this.feedService.getNews(newsId).subscribe(news => this.news = news);
+    this.feedService.getNews(feedId, newsId).subscribe(news => this.news = news);
 
   }
 
   next(): void {
-
-    this.feedService.getNews(this.news.NextId).subscribe(news => this.news = news);
+    this.feedService.getNews(this.news.FeedId, this.news.NextId).subscribe(news => this.news = news);
   }
 }
