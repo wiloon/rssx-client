@@ -4,7 +4,7 @@ import {Feed} from './feed';
 
 
 import {News} from './news';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {MessageService} from './message.service';
 
 @Injectable()
@@ -19,7 +19,8 @@ export class FeedService {
 
   getNewsList(id: number): Observable<News[]> {
     let newsList: Observable<News[]>;
-    newsList = this.http.get<News[]>('api/news-list?id=' + id);
+
+    newsList = this.http.get<News[]>('api/news-list', {params: new HttpParams().set('id', String(id))});
     return newsList;
   }
 
