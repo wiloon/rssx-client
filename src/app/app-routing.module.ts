@@ -3,7 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {FeedListComponent} from './feed-list/feed-list.component';
 import {FeedComponent} from './feed/feed.component';
 import {NewsComponent} from './news/news.component';
-import {NotFoundComponent} from "./not-found/not-found.component";
+import {NotFoundComponent} from './not-found/not-found.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/feeds', pathMatch: 'full'},
