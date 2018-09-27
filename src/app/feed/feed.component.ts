@@ -29,8 +29,4 @@ export class FeedComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-
-  // markRangeRead(): void {
-  //   this.feedService.markRangeRead(this.news.FeedId, this.news.NextId).subscribe(news => this.news = news);
-  // }
 }

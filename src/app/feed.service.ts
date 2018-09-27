@@ -32,8 +32,4 @@ export class FeedService {
   private log(message: string) {
     this.messageService.add('HeroService: ' + message);
   }
-
-  markRangeRead(feedId,start,end:number){
-    
-  }
 }
