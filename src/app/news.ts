@@ -1,8 +1,8 @@
 export class News {
-  Id: number;
+  Id: string;
   FeedId: number;
   Title: string;
   Url: string;
   Description: string;
-  NextId: number;
+  NextId: string;
 }
