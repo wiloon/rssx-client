@@ -21,11 +21,11 @@ export class NewsComponent implements OnInit {
     this.getNews();
   }
 
-  newsId: string;
+
   getNews(): void {
     const feedId = +this.route.snapshot.paramMap.get('feedId');
-    this.newsId = this.route.snapshot.paramMap.get("id");
-    this.feedService.getNews(feedId, this.newsId).subscribe(news => this.news = news);
+    const newsId = this.route.snapshot.paramMap.get('id');
+    this.feedService.getNews(feedId, newsId).subscribe(news => this.news = news);
 
   }
 
