@@ -1,6 +1,6 @@
 <div *ngIf="news">
   <button class="next" id="news-back" (click)="goBack()">Back</button>
-  <button class="next" id="input" (click)="nextArticle()">Previous</button>
+  <button class="next" id="input" (click)="previousArticle()">Previous</button>
   <button class="next" id="input" (click)="nextArticle()">Next</button>
 
   <h2><a href="{{news.Url}}" target="_blank">{{ news.Title }}</a></h2>

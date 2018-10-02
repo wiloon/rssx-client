@@ -28,6 +28,10 @@ export class FeedService {
     return this.http.get<News>('api/news', {params: new HttpParams().set('id', id).set('feedId', String(feedId))});
   }
 
+  getPreviousNews(feedId: number, currentid: string): Observable<News> {
+    return this.http.get<News>('api/news-previous', {params: new HttpParams().set('currentId', currentid).set('feedId', String(feedId))});
+  }
+
   log(message: string) {
     this.messageService.add('HeroService: ' + message);
   }

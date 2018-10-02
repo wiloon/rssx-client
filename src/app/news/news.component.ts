@@ -34,6 +34,11 @@ export class NewsComponent implements OnInit {
     this.feedService.getNews(this.news.FeedId, this.news.NextId).subscribe(news => this.news = news);
   }
 
+  previousArticle(): void {
+    this.feedService.getPreviousNews(this.news.FeedId, this.news.Id).subscribe(news => this.news = news);
+  }
+
+
   goBack(): void {
     this.location.back();
   }
