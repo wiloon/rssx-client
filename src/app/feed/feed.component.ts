@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
 import {FeedService} from '../feed.service';
 import {News} from '../news';
-import {Location} from '@angular/common';
+
 
 @Component({
   selector: 'app-feed',
@@ -28,5 +29,10 @@ export class FeedComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  markRead(): void {
+    const feedId = +this.route.snapshot.paramMap.get('id');
+    this.feedService.markRead(feedId).subscribe(newsList => this.newsList = newsList);
   }
 }

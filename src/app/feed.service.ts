@@ -19,7 +19,6 @@ export class FeedService {
 
   getNewsList(id: number): Observable<News[]> {
     let newsList: Observable<News[]>;
-
     newsList = this.http.get<News[]>('api/news-list', {params: new HttpParams().set('id', String(id))});
     return newsList;
   }
@@ -29,7 +28,13 @@ export class FeedService {
     return this.http.get<News>('api/news', {params: new HttpParams().set('id', id).set('feedId', String(feedId))});
   }
 
-  private log(message: string) {
+  log(message: string) {
     this.messageService.add('HeroService: ' + message);
+  }
+
+  markRead(feedId: number): Observable<News[]> {
+    let newsList: Observable<News[]>;
+    newsList = this.http.get<News[]>('api/mark-read', {params: new HttpParams().set('feedId', String(feedId))});
+    return newsList;
   }
 }

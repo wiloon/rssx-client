@@ -1,7 +1,13 @@
-<ul class="news-list">
-  <li *ngFor="let news of newsList">
-    <a routerLink="/news/{{news.FeedId}}/{{news.Id}}">
-    {{news.Title}} - {{news.ReadFlag}}
-    </a>
-  </li>
-</ul>
+<div>
+  <button class="rssxBtn" id="feed-back" (click)="goBack()">Back</button>
+  <button class="rssxBtn" id="input" (click)="markRead()">Mark Read</button>
+
+  <ul class="news-list">
+    <li *ngFor="let news of newsList">
+      <a routerLink="/news/{{news.FeedId}}/{{news.Id}}"
+         [ngClass]="{'newsRead': news.ReadFlag, 'newsUnread': !news.ReadFlag}">
+      {{news.Title}}
+      </a>
+    </li>
+  </ul>
+</div>

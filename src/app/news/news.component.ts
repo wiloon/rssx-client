@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {News} from '../news';
-import {Location} from '@angular/common';
 import {ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
 import {FeedService} from '../feed.service';
+import {News} from '../news';
+
 
 @Component({
   selector: 'app-news',
@@ -29,7 +30,11 @@ export class NewsComponent implements OnInit {
 
   }
 
-  next(): void {
+  nextArticle(): void {
     this.feedService.getNews(this.news.FeedId, this.news.NextId).subscribe(news => this.news = news);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

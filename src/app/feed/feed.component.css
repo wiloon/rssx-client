@@ -1,0 +1,29 @@
+.newsUnread {
+  color: #000;
+}
+
+.newsRead {
+  color: #aaa;
+}
+
+.rssxBtn {
+  margin: 10pt 0 010pt 0;
+}
+
+
+a:link {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: blink
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
