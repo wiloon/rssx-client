@@ -5,4 +5,5 @@ export class News {
   Url: string;
   Description: string;
   NextId: string;
+  ReadFlag: boolean;
 }
