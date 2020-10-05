@@ -23,7 +23,14 @@ export class FeedService {
   }
 
   getNews(feedId: number, id: string): Observable<News> {
-    return this.http.get<News>('api/news', {params: new HttpParams().set('id', id).set('feedId', String(feedId))});
+    return this.http.get<News>(
+      'api/news',
+      {
+        params: new HttpParams()
+          .set('id', id)
+          .set('feedId', String(feedId))
+      }
+    );
   }
 
   getPreviousNews(feedId: number, currentid: string): Observable<News> {
@@ -36,7 +43,12 @@ export class FeedService {
 
   markRead(feedId: number): Observable<News[]> {
     let newsList: Observable<News[]>;
-    newsList = this.http.get<News[]>('api/mark-read', {params: new HttpParams().set('feedId', String(feedId))});
+    newsList = this.http.get<News[]>(
+      'api/mark-read',
+      {
+        params: new HttpParams().set('feedId', String(feedId))
+      }
+    );
     return newsList;
   }
 }
